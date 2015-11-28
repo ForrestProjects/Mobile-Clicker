@@ -10,6 +10,9 @@ public class SaveLoad : MonoBehaviour {
 	public Image savebutton;
 	public Image loadbutton;
 	public TouchStuff TStuff;
+	private bool Overwrite;
+	public GameObject oWrite;
+	private bool Chosen = false;
 	// Use this for initialization
 	void Start () {
 	
@@ -25,7 +28,7 @@ public class SaveLoad : MonoBehaviour {
 
 	}
 
-	public void Save(){
+	public void PerformSave(){
 		float[] buttonslist = SHandler.returnButtons ();
 		BinaryFormatter binary = new BinaryFormatter ();
 		FileStream fStream = File.Create (Application.persistentDataPath + "/19882609.dru");
@@ -34,9 +37,29 @@ public class SaveLoad : MonoBehaviour {
 		saver.s_Count = CHandler.totalClouds;
 		saver.s_CValue = CHandler.clickValue;
 		saver.b_values = buttonslist;
-		saver.s_clicks = TStuff.returnScore();
-		binary.Serialize (fStream,saver);
+		saver.s_clicks = TStuff.returnScore ();
+		binary.Serialize (fStream, saver);
 		fStream.Close ();
+		CloseUI ();
+
+	}
+
+	public void CloseUI(){
+		oWrite.GetComponent <CanvasGroup>().alpha = 0;
+		oWrite.GetComponent <CanvasGroup>().blocksRaycasts = false;
+		oWrite.GetComponent <CanvasGroup>().interactable = false;
+
+	}
+	public void Save(){
+		if (File.Exists (Application.persistentDataPath + "/19882609.dru")) {
+
+			oWrite.GetComponent <CanvasGroup>().alpha = 1;
+			oWrite.GetComponent <CanvasGroup>().blocksRaycasts = true;
+			oWrite.GetComponent <CanvasGroup>().interactable = true;
+
+		} else {
+			PerformSave();
+		}
 
 	}
 

@@ -86,14 +86,14 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: com.TapInvasion
-  bundleVersion: 6
+  bundleVersion: 7
   preloadedAssets: []
   metroEnableIndependentInputSource: 1
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
   productGUID: 5c596556decb141888be121e4494e18f
-  AndroidBundleVersionCode: 6
+  AndroidBundleVersionCode: 7
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -115,6 +115,7 @@ PlayerSettings:
   iPhoneTargetOSVersion: 22
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
+  uIRequiresFullScreen: 1
   uIStatusBarHidden: 1
   uIExitOnSuspend: 1
   uIStatusBarStyle: 0
@@ -163,38 +164,66 @@ PlayerSettings:
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 2800000, guid: 3491baa5d7c8f9a4a8a3942eac1ebf14, type: 3}
-      m_Size: 128
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 3491baa5d7c8f9a4a8a3942eac1ebf14, type: 3}
+      m_Width: 128
+      m_Height: 128
   - m_BuildTarget: iPhone
     m_Icons:
-    - m_Icon: {fileID: 2800000, guid: cb5a31c1dac864b5f90811c410e7e572, type: 3}
-      m_Size: 152
-    - m_Icon: {fileID: 2800000, guid: c94506069dd2c484780fb8bbe4a4eb17, type: 3}
-      m_Size: 144
-    - m_Icon: {fileID: 2800000, guid: 246bc47f24a854aaea5efe68ae683fc3, type: 3}
-      m_Size: 120
-    - m_Icon: {fileID: 0}
-      m_Size: 114
-    - m_Icon: {fileID: 2800000, guid: cafb14b415d7f4a828994e2c02e28938, type: 3}
-      m_Size: 76
-    - m_Icon: {fileID: 2800000, guid: fdd4612c583e9480dac1f3782facd476, type: 3}
-      m_Size: 72
-    - m_Icon: {fileID: 0}
-      m_Size: 57
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: cb5a31c1dac864b5f90811c410e7e572, type: 3}
+      m_Width: 152
+      m_Height: 152
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: c94506069dd2c484780fb8bbe4a4eb17, type: 3}
+      m_Width: 144
+      m_Height: 144
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 246bc47f24a854aaea5efe68ae683fc3, type: 3}
+      m_Width: 120
+      m_Height: 120
+    - serializedVersion: 2
+      m_Icon: {fileID: 0}
+      m_Width: 114
+      m_Height: 114
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: cafb14b415d7f4a828994e2c02e28938, type: 3}
+      m_Width: 76
+      m_Height: 76
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: fdd4612c583e9480dac1f3782facd476, type: 3}
+      m_Width: 72
+      m_Height: 72
+    - serializedVersion: 2
+      m_Icon: {fileID: 0}
+      m_Width: 57
+      m_Height: 57
   - m_BuildTarget: Android
     m_Icons:
-    - m_Icon: {fileID: 2800000, guid: 3491baa5d7c8f9a4a8a3942eac1ebf14, type: 3}
-      m_Size: 192
-    - m_Icon: {fileID: 2800000, guid: 3491baa5d7c8f9a4a8a3942eac1ebf14, type: 3}
-      m_Size: 144
-    - m_Icon: {fileID: 2800000, guid: 3491baa5d7c8f9a4a8a3942eac1ebf14, type: 3}
-      m_Size: 96
-    - m_Icon: {fileID: 2800000, guid: 3491baa5d7c8f9a4a8a3942eac1ebf14, type: 3}
-      m_Size: 72
-    - m_Icon: {fileID: 2800000, guid: 3491baa5d7c8f9a4a8a3942eac1ebf14, type: 3}
-      m_Size: 48
-    - m_Icon: {fileID: 2800000, guid: 3491baa5d7c8f9a4a8a3942eac1ebf14, type: 3}
-      m_Size: 36
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 3491baa5d7c8f9a4a8a3942eac1ebf14, type: 3}
+      m_Width: 192
+      m_Height: 192
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 3491baa5d7c8f9a4a8a3942eac1ebf14, type: 3}
+      m_Width: 144
+      m_Height: 144
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 3491baa5d7c8f9a4a8a3942eac1ebf14, type: 3}
+      m_Width: 96
+      m_Height: 96
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 3491baa5d7c8f9a4a8a3942eac1ebf14, type: 3}
+      m_Width: 72
+      m_Height: 72
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 3491baa5d7c8f9a4a8a3942eac1ebf14, type: 3}
+      m_Width: 48
+      m_Height: 48
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 3491baa5d7c8f9a4a8a3942eac1ebf14, type: 3}
+      m_Width: 36
+      m_Height: 36
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
     m_StaticBatching: 1
@@ -297,6 +326,10 @@ PlayerSettings:
   ps4pnGameCustomData: 1
   playerPrefsSupport: 0
   ps4ReprojectionSupport: 0
+  ps4UseAudio3dBackend: 0
+  ps4Audio3dVirtualSpeakerCount: 14
+  ps4attribCpuUsage: 0
+  ps4SocialScreenEnabled: 0
   ps4attribUserManagement: 0
   ps4attribMoveSupport: 0
   ps4attrib3DSupport: 0
@@ -355,18 +388,18 @@ PlayerSettings:
     1: 
     2: 
     7: 
-  metroPackageName: 
+  metroPackageName: TTE
   metroPackageLogo: 
   metroPackageLogo140: 
   metroPackageLogo180: 
   metroPackageLogo240: 
-  metroPackageVersion: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: 
+  metroApplicationDescription: Tap To Extinction
   metroStoreTileLogo80: 
   metroStoreTileLogo: 
   metroStoreTileLogo140: 
@@ -405,7 +438,7 @@ PlayerSettings:
   metroPhoneSplashScreenImage: 
   metroPhoneSplashScreenImage140: 
   metroPhoneSplashScreenImage240: 
-  metroTileShortName: 
+  metroTileShortName: Tap To Extinc
   metroCommandLineArgsFile: 
   metroTileShowName: 0
   metroMediumTileShowName: 0
@@ -416,7 +449,22 @@ PlayerSettings:
   metroTileBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   metroSplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   metroSplashScreenUseBackgroundColor: 0
-  platformCapabilities: {}
+  platformCapabilities:
+    WindowsStoreApps:
+      EnterpriseAuthentication: False
+      HumanInterfaceDevice: False
+      InternetClient: True
+      InternetClientServer: True
+      Location: True
+      Microphone: False
+      MusicLibrary: False
+      PicturesLibrary: False
+      PrivateNetworkClientServer: False
+      Proximity: False
+      RemovableStorage: False
+      SharedUserCertificates: False
+      VideosLibrary: False
+      WebCam: False
   metroFTAName: 
   metroFTAFileTypes: []
   metroProtocolName: 

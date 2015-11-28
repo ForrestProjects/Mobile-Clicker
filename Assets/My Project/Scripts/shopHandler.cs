@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class shopHandler : MonoBehaviour {
 	public CloudHandler CHandler;
+	public SaveLoad SLoad;
 	[System.Serializable]
 	public class Item{
 		public string name;
@@ -29,7 +30,6 @@ public class shopHandler : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-
 		buttonItems = new GameObject[shopItems.Length];
 		counter = 0;
 		foreach (Item i in shopItems) {
@@ -47,8 +47,8 @@ public class shopHandler : MonoBehaviour {
 					if(i.cost > 1000000000){
 						if(i.cost > 1000000000000){
 							scp.cost.text =  (i.cost/1000000000000).ToString("F2")+" T" ;
-						}
-						scp.cost.text =  (i.cost/1000000000).ToString("F2") +" B" ;
+						}else{
+							scp.cost.text =  (i.cost/1000000000).ToString("F2") +" B" ;}
 					}else{
 						scp.cost.text =  (i.cost/1000000).ToString("F2") +" M" ;}
 				}else{
@@ -61,15 +61,15 @@ public class shopHandler : MonoBehaviour {
 					if (i.cps > 1000000){
 						if(i.cps > 1000000000){
 							if(i.cps > 1000000000000){
-								scp.cps.text = "+"+ (i.cps/1000000000000).ToString("F2") +" T" + " p/s";
-							}
-							scp.cps.text = "+"+ (i.cps/1000000000).ToString("F2") +" B" + " p/s";
+								scp.cps.text = "+"+ (i.cps/1000000000000).ToString("F2") +" T" + " k/s";
+							}else{
+								scp.cps.text = "+"+ (i.cps/1000000000).ToString("F2") +" B" + " k/s";}
 						}else{
-							scp.cps.text = "+"+ (i.cps/1000000).ToString("F2") +" M" + " p/s";}
+							scp.cps.text = "+"+ (i.cps/1000000).ToString("F2") +" M" + " k/s";}
 					}else{
-						scp.cps.text = "+"+ (i.cps/1000).ToString("F2") +" K" + " p/s";}
+						scp.cps.text = "+"+ (i.cps/1000).ToString("F2") +" K" + " k/s";}
 				}else{
-					scp.cps.text = "+"+ i.cps.ToString ("F2") + " p/s";}
+					scp.cps.text = "+"+ i.cps.ToString ("F2") + " k/s";}
 			}
 			else{
 				if (i.cps > 1000){
@@ -77,8 +77,8 @@ public class shopHandler : MonoBehaviour {
 						if(i.cps > 1000000000){
 							if(i.cps > 1000000000000){
 								scp.cps.text = "+"+ (i.cps/1000000000000).ToString("F2")+" T" ;
-							}
-							scp.cps.text = "+"+ (i.cps/1000000000).ToString("F2") +" B" ;
+							}else{
+								scp.cps.text = "+"+ (i.cps/1000000000).ToString("F2") +" B" ;}
 						}else{
 							scp.cps.text = "+"+ (i.cps/1000000).ToString("F2") +" M" ;}
 					}else{
@@ -95,6 +95,7 @@ public class shopHandler : MonoBehaviour {
 			btn.transform.SetParent (this.transform, false);
 			counter++;
 		}
+
 	}
 
 	public float[] returnButtons(){
@@ -149,7 +150,7 @@ public class shopHandler : MonoBehaviour {
 			if(bought.UpClick == true){
 				bought.cps = bought.cps * 1.8f;
 			}else{
-				bought.cps = bought.cps * 1.1f;}
+				bought.cps = bought.cps * 1.5f;}
 			UpdateItems ();
 		}
 	}
@@ -165,15 +166,15 @@ public class shopHandler : MonoBehaviour {
 					if (i.cps > 1000000){
 						if(i.cps > 1000000000){
 							if(i.cps > 1000000000000){
-								scp.cps.text = "+"+ (i.cps/1000000000000).ToString("F2") +" T" + " p/s";
-							}
-							scp.cps.text = "+"+ (i.cps/1000000000).ToString("F2") +" B" + " p/s";
+								scp.cps.text = "+"+ (i.cps/1000000000000).ToString("F2") +" T" + " k/s";
+							}else{
+								scp.cps.text = "+"+ (i.cps/1000000000).ToString("F2") +" B" + " k/s";}
 						}else{
-							scp.cps.text = "+"+ (i.cps/1000000).ToString("F2") +" M" + " p/s";}
+							scp.cps.text = "+"+ (i.cps/1000000).ToString("F2") +" M" + " k/s";}
 					}else{
-						scp.cps.text = "+"+ (i.cps/1000).ToString("F2") +" K" + " p/s";}
+						scp.cps.text = "+"+ (i.cps/1000).ToString("F2") +" K" + " k/s";}
 				}else{
-					scp.cps.text = "+"+ i.cps.ToString ("F2") + " p/s";}
+					scp.cps.text = "+"+ i.cps.ToString ("F2") + " k/s";}
 			}
 			else{
 				if (i.cps > 1000){
@@ -181,8 +182,8 @@ public class shopHandler : MonoBehaviour {
 						if(i.cps > 1000000000){
 							if(i.cps > 1000000000000){
 								scp.cps.text = "+"+ (i.cps/1000000000000).ToString("F2")+" T" ;
-							}
-							scp.cps.text = "+"+ (i.cps/1000000000).ToString("F2") +" B" ;
+							}else{
+								scp.cps.text = "+"+ (i.cps/1000000000).ToString("F2") +" B" ;}
 						}else{
 							scp.cps.text = "+"+ (i.cps/1000000).ToString("F2") +" M" ;}
 					}else{
@@ -197,8 +198,8 @@ public class shopHandler : MonoBehaviour {
 					if(i.cost > 1000000000){
 						if(i.cost > 1000000000000){
 							scp.cost.text =  (i.cost/1000000000000).ToString("F2")+" T" ;
-						}
-						scp.cost.text =  (i.cost/1000000000).ToString("F2") +" B" ;
+						}else{
+							scp.cost.text =  (i.cost/1000000000).ToString("F2") +" B" ;}
 					}else{
 						scp.cost.text =  (i.cost/1000000).ToString("F2") +" M" ;}
 				}else{
